@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素周期表 単語カード</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>元素周期表 単語カード</h1>
+            <button id="dark-mode-toggle" class="dark-mode-icon">🌙</button>
+        </header>
+        <main class="main-menu">
+            <div class="menu-area">
+                <label for="start-number">開始番号:</label>
+                <input type="number" id="start-number" placeholder="1" min="1" max="118">
+                <label for="end-number">終了番号:</label>
+                <input type="number" id="end-number" placeholder="118" min="1" max="118">
+                <label for="mode-select">モード選択:</label>
+                <select id="mode-select">
+                    <option value="name-to-symbol">元素名 → 元素記号</option>
+                    <option value="symbol-to-name">元素記号 → 元素名</option>
+                </select>
+                <button id="start-button" class="button">開始</button>
+            </div>
+        </main>
+        <div class="card-container">
+            <div class="card-header">
+                <button id="back-to-menu" class="button">戻る</button>
+            </div>
+            <div id="card" class="">
+                <div class="front">
+                    <p id="question"></p>
+                </div>
+                <div class="back">
+                    <p><span id="answer-symbol"></span> <span id="answer-name"></span></p>
+                    <p class="answer-number"><span id="answer-number"></span></p>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="prev-button" class="button">前へ</button>
+                <button id="next-button" class="button">次へ</button>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2025 元素周期表 単語カード</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
